@@ -40,44 +40,62 @@ header nav ul {
 header nav ul li a {
     margin: 0 30px;
     font-weight: bolder;
-    font-size: 1.25vw;
+    font-size: 1.65vw;
+}
+
+footer {
+    padding: 20px;
+    color: lightgray;
+    display: flex;
+    justify-content: space-between;
 }
 
 .hero {
     background-image: url("../images/wood-grain-background.jpg");
-    height: 400px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    font-weight: bolder;
+    font-size: 2vw;
+}
+
+.hero h1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: black;
+    margin-left: auto;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    
 }
 
 
 .about-me {
-    margin-bottom: 20px;
     padding: 80px;
     display: flex
-
 }
 
 .about-me h2,
 .work h2,
-.contact-me {
+.contact-me h2 {
     align-items: left;
     border-right: 3px solid slategray;
+    display: flex;
+    
 }
 
 .about-me img {
     width: 20%;
     padding-left: 20px;
-   
-    
 }
 
 .about-me p {
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 20px;
     
 }
 
@@ -90,38 +108,73 @@ header nav ul li a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat (6, 1fr);
-    grid-template-rows: repeat (6, 1fr);
-    grid-gap: 30px;
+    grid-template-columns: 12;
+    grid-template-rows: 12;
+    grid-gap: 10px;
     grid-auto-flow: dense;
+    justify-items: stretch;
     padding-left: 20px;
 }
 
 .grid-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border: 5px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border: 5px solid slategray;
+    border-radius: 1px;
     font-size: 35px;
     background-color: slategray;
+    color: lightgrey;
 }
 
 .item-1 {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 4;
-
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url("../images/hero-bg\ copy.jpg");
 }
 
-.grid-item:nth-child(2n) {
-    grid-colum: 5 / span 2
-    grid-row: span 2
+.item-1 a {
+    text-decoration: none;
+    color: slategray;
 }
+
+.item-2 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.item-3 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.item-4 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+.item-5 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+
 
 .contact-me {
     margin-bottom: 20px;
     padding: 80px;
     display: flex;
+    justify-content: space-between;
 }
 
 
@@ -129,5 +182,4 @@ header nav ul li a {
     text-decoration: none;
     color: slategray;
     font-weight: bolder;
-    padding-left: 20px;
 }
